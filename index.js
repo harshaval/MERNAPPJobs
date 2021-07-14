@@ -6,6 +6,8 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
+const withAuth = require("./middleware/middleware");
+
 //using cors
 app.use(cors());
 
