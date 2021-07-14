@@ -6,6 +6,11 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
+//routes connecting to the job route
+const jobs = require("./routes/api/jobs");
+//routes connecting to the user route
+const users = require("./routes/api/user");
+
 const withAuth = require("./middleware/middleware");
 
 //using cors
@@ -29,6 +34,13 @@ try{
 } catch (err) {
     console.log("could not connect");
 }
+
+//user routes
+app.get("/checkToken", withAuth, function(req, res){
+    res.sendStatus(200);
+});
+app.use("/api/jobs", jobs);
+app.use("/api/users/", users);
 
 const port = process.env.PORT || 3000;
 
