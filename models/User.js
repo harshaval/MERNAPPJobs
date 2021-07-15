@@ -1,6 +1,6 @@
-const mongoose = reqiure("mongoose");
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const bycrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 const UserSchema = ({
     name: { type: String, required: true },
@@ -10,7 +10,7 @@ const UserSchema = ({
 });
 
 //Auth user against database
-UserSchema.statics.authenticate = function(email, password, callback){
+UserSchema.statics.authenticate = function(email, password, callback) {
     User.findOne({ email: email }).exec(function(err, user) {
         if (err) {
             return callback(err);
@@ -19,7 +19,7 @@ UserSchema.statics.authenticate = function(email, password, callback){
             err.status = 401;
             return callback(err);
         }
-        bycrypt.compare(password, user.password, function(err, result) {
+        bcrypt.compare(password, user.password, function(err, result) {
             if (result == true) {
                 return callback(null, user);
             } else {
@@ -31,7 +31,7 @@ UserSchema.statics.authenticate = function(email, password, callback){
 
 UserSchema.pre("save", function(next){
     let user = this;
-    bycrypt.hash(user.password, 10, function(err, hash) {
+    bcrypt.hash(user.password, 10, function(err, hash) {
         if(err){
             return next(err);
         }
