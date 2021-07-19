@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+.items {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbbar {
+  background: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.jobsbody {
+  padding-top: 10px;
+  background: #ece9e7;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cardd {
+  padding-bottom: 10px;
+  color: black;
 }
-
-.App-link {
-  color: #61dafb;
+.cardd :hover {
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formbody {
+  padding: 20px;
+  background: #d2c3c3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer {
+  background: #fff;
+}
+.styled {
+  padding: 60px;
+  background: #d2c3c3;
+}
+.contact-form {
+  margin-bottom: 60px;
+}
+.job-description {
+  margin-top: 20px;
 }
