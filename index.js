@@ -22,6 +22,10 @@ app.use(bodyParser.json);
 //cookie parser
 app.use(cookieParser());
 
+/*Adds the react production build to serve react requests*/
+app.use(express.static(path.join(__dirname, "./client/build")));
+/*React root*/
+
 const mongoURI = "mongodb+srv://thisusername:thisisthepassword@projectcluster.sa4pw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 //connect to mongo db
@@ -41,6 +45,10 @@ app.get("/checkToken", withAuth, function(req, res){
 });
 app.use("/api/jobs", jobs);
 app.use("/api/users/", users);
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
 
 const port = process.env.PORT || 3000;
 
