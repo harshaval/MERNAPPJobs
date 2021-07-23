@@ -9,7 +9,7 @@ import {
     Row,
     Col
   } from "reactstrap";
-  import Jumbotron from "./Jumbotronn";
+  import Jumbotron from "./Jumbotron";
   import axios from "axios";
 
   class ContactUs extends Component {

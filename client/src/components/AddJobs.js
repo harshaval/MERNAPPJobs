@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Col, Form, FormGroup, Label, Input, Row } from "reactstrap";
 import axios from "axios";
-import Jumbotronn from "./Jumbotronn";
+import Jumbotronn from "./Jumbotron";
 import Styled from "./Styled";
 
 class AddJobs extends Component {

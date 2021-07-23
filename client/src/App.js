@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import NoMatch from "./components/NoLoad";
 import AddJobs from "./components/AddJobs";
 import Footer from "./components/Footer";

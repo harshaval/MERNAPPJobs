@@ -1,6 +1,6 @@
 import React from 'react';
 import { Jumbotron } from 'reactstrap';
-import Background from "../assets/office.jpg";
+import Background from "../assets/office.jpeg";
 
 export default function Jumbotronn() {
     return (

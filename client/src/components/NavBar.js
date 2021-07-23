@@ -35,7 +35,7 @@ class NavBar extends Component {
               href="/"
               className="items"
             >
-              Green Jobs
+              Robert's Jobs 
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
